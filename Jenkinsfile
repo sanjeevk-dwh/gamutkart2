@@ -28,7 +28,7 @@ pipeline {
                 stage('Deployment') {
                 steps {
                                 sh 'sshpass -p "sanjeev" scp target/gamutkart.war sanjeev@172.17.0.4:/home/sanjeev/distros/apache-tomcat-8.5.43/webapps'
-                                sh 'sshpass -p "sanjeev" ssh gamut@172.17.0.4 "JAVA_HOME=/home/sanjeev/distros/jdk1.8.0_221" "/home/sanjeev/distros/apache-tomcat-8.5.43/bin/startup.sh"'
+                                sh 'sshpass -p "sanjeev" ssh sanjeev@172.17.0.4 "JAVA_HOME=/home/sanjeev/distros/jdk1.8.0_221" "/home/sanjeev/distros/apache-tomcat-8.5.43/bin/startup.sh"'
                 }
                 }
     }
